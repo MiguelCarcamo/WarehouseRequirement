@@ -8,8 +8,7 @@ class conn:
         cur = None 
         try:
             loop = asyncio.get_event_loop()
-            # dsn = r'Driver=SQL Server;Server=10.48.26.25;Database=SUPPLYPLANNING_test;Trusted_Connection=yes;'
-            dsn = r'Driver=SQL Server;Server=10.48.26.25;Database=WAREHOUSE;UID=supply_planning;PWD=ibUpBdG5K?k!;'
+            dsn = r''
             conn = await aioodbc.connect(dsn=dsn, loop=loop)
             cur = await conn.cursor()
             await cur.execute(text)
@@ -30,8 +29,7 @@ class conn:
         cur = None        
         try:
             loop = asyncio.get_event_loop()
-            # dsn = r'Driver=SQL Server;Server=10.48.26.25;Database=SUPPLYPLANNING_test;Trusted_Connection=yes;'
-            dsn = r'Driver=SQL Server;Server=10.48.26.25;Database=WAREHOUSE;UID=supply_planning;PWD=ibUpBdG5K?k!;'
+            dsn = r''
             conn = await aioodbc.connect(dsn=dsn, loop=loop)
             cur = await conn.cursor()
             await cur.execute(text)
@@ -51,7 +49,7 @@ class conn:
         cur = None
         try:
             loop = asyncio.get_event_loop()
-            dsn = r'Driver=SQL Server;Server=10.28.1.8\POLYSQL2019;Database=Tegra_Production;UID=svc_polyreporting;PWD=P0lyPM2021!!;'
+            dsn = r''
             conn = await aioodbc.connect(dsn=dsn, loop=loop)
             cur = await conn.cursor()
             await cur.execute(text)
